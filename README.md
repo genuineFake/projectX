@@ -1,1 +1,2 @@
 # projectX
+Simple School Project.
