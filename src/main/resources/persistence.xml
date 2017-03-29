@@ -5,7 +5,7 @@
  http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
              version="1.0">
     <persistence-unit name="persistence-unit">
-        <class>lt.vtvpmc.ems.pw.entities.Student</class>
+        <class>lt.vtvpmc.ems.pw.data.entities.Student</class>
         <properties>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
         </properties>

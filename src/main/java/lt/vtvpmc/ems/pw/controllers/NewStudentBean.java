@@ -1,8 +1,8 @@
-package lt.vtvpmc.ems.pw.ui;
+package lt.vtvpmc.ems.pw.controllers;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import lt.vtvpmc.ems.pw.entities.Student;
+import lt.vtvpmc.ems.pw.data.entities.Student;
 import org.springframework.transaction.annotation.Transactional;
 
 public class NewStudentBean {
