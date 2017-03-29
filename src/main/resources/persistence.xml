@@ -6,6 +6,7 @@
              version="1.0">
     <persistence-unit name="persistence-unit">
         <class>lt.vtvpmc.ems.pw.data.entities.Student</class>
+        <class>lt.vtvpmc.ems.pw.data.entities.TeachingPlanMandatory</class>
         <properties>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
         </properties>
