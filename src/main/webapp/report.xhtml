@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html" 
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+    
+	<h:head>
+		<title>Ataskaita</title>
+	</h:head>
+	
+	<h:body>
+	<h:form>
+	
+	Vardas <h:inputText />  	Pavardė <h:inputText/>     Grupė <h:inputText/>
+	
+	<h:panelGrid columns="2">
+	
+	<h:panelGrid style="border:1px solid black" >
+	<f:facet name="header">
+    <h:outputText value="Privalomieji bendrojo ugdymo branduolio dalykai" />
+  	</f:facet><br/>
+	
+	Dorinis ugdymas:
+	<h:panelGrid columns="2" style="border:1px solid black">
+	Tikyba <h:inputText value="#{teachingPlanMandatory.tikyba}"></h:inputText>
+	Etika <h:inputText value="#{teachingPlanMandatory.etika}"></h:inputText>
+	</h:panelGrid><br/>
+	
+	Kalbos:
+	<h:panelGrid columns="2" style="border:1px solid black">
+	Lietuvių kalba ir literatūra <h:inputText value="#{teachingPlanMandatory.lietuviuIrLiteratura4}}"></h:inputText>
+	Lietuvių kalba ir literatūra <h:inputText value="#{teachingPlanMandatory.lietuviuIrLiteratura6}"></h:inputText>
+	Gimtoji rusų: <h:inputText value="#{teachingPlanMandatory.gimtRusu}"></h:inputText>
+	Gimtoji lenkų: <h:inputText value="#{teachingPlanMandatory.gimtLenku}"></h:inputText>
+	Užsienio kalba (anglų) <h:inputText value="#{teachingPlanMandatory.uzsienioAnglu}"></h:inputText>
+	Užsienio kalba (vokiečių) <h:inputText value="#{teachingPlanMandatory.uzsienioVokieciu}"></h:inputText>
+	Užsienio kalba (prancūzų) <h:inputText value="#{teachingPlanMandatory.uzsienioPrancuzu}"></h:inputText>
+	Užsienio kalba (rusų) <h:inputText value="#{teachingPlanMandatory.uzsienioRusu}"></h:inputText>
+	</h:panelGrid><br/>
+	
+	Socialinis ugdymas:
+	<h:panelGrid columns="2" style="border:1px solid black">
+	Istorija <h:inputText value="#{teachingPlanMandatory.istorija}"></h:inputText>
+	Geografija <h:inputText value="#{teachingPlanMandatory.geografija}"></h:inputText>
+	Integruotas soc. mokslų kursas <h:inputText value="#{teachingPlanMandatory.integrSocMokKursas}"></h:inputText>
+	</h:panelGrid><br/>
+	
+	<h:panelGrid columns="2">
+	Matematika <h:inputText value="#{teachingPlanMandatory.matematika}"></h:inputText>
+	</h:panelGrid><br/>
+	
+	Gamtamokslinis ugdymas:
+	<h:panelGrid columns="2" style="border:1px solid black">
+	Biologija <h:inputText value="#{teachingPlanMandatory.biologija}"></h:inputText>
+	Fizika <h:inputText value="#{teachingPlanMandatory.fizika}"></h:inputText>
+	Chemija <h:inputText value="#{teachingPlanMandatory.chemija}"></h:inputText>
+	Integruotas gamtos mokslų kursas <h:inputText value="#{teachingPlanMandatory.integrGamtosMoksluKursas}"></h:inputText>
+	</h:panelGrid><br/>
+	
+	Kūno kultūra:
+	<h:panelGrid columns="2" style="border:1px solid black">
+	Bendroji kūno kultūra <h:inputText value="#{teachingPlanMandatory.bendrojiKunoK}"></h:inputText>
+	Futbolas <h:inputText value="#{teachingPlanMandatory.futbolas}"></h:inputText>
+	Krepšinis <h:inputText value="#{teachingPlanMandatory.krepsinis}"></h:inputText>
+	</h:panelGrid><br/><br/>
+	
+	<h:panelGrid columns="2">
+	<h:outputLabel style="color:green">Privalomieji dalykai viso: </h:outputLabel><h:inputText value="0"></h:inputText>
+	</h:panelGrid>
+	</h:panelGrid>
+	
+	
+	
+	
+	
+	<h:panelGrid style="border:1px solid black">
+	<f:facet name="header">
+    <h:outputText value="Pasirenkamieji profesijos arba bendrojo ugdymo dalykai" />
+  	</f:facet><br/>
+  	
+	Pasirenkamieji dalykai:
+	<h:panelGrid columns="2" style="border:1px solid black">
+	Rusų kalba II <h:inputText value="#{subjectsToChoose.rusu2}"></h:inputText>
+	Anglų kalba II <h:inputText value="#{subjectsToChoose.anglu2}"></h:inputText>
+	Vokiečių kalba II <h:inputText value="#{subjectsToChoose.vokieciu2}"></h:inputText>
+	Dizainas <h:inputText value="#{subjectsToChoose.dizainas}"></h:inputText>
+	Dailė <h:inputText value="#{subjectsToChoose.daile}"></h:inputText>
+	Teatras <h:inputText value="#{subjectsToChoose.teatras}"></h:inputText>
+	Muzika <h:inputText value="#{subjectsToChoose.muzika}"></h:inputText>
+	Informacinės technologijos <h:inputText value="#{subjectsToChoose.informacinesTechnologijos}"></h:inputText>
+	</h:panelGrid><br/>
+	
+	Išplėstinis dalykų kursas:
+	<h:panelGrid columns="2" style="border:1px solid black">
+	Lietuvių gimtoji kalba (išpl.) <h:inputText value="#{subjectsToChoose.lietuviuGimtojiIspl}"></h:inputText>
+	Lietuvių valstybinė kalba (išpl.) <h:inputText value="#{subjectsToChoose.lietuviuValstybineIspl}"></h:inputText>
+	Užsienio kalba (išpl.) <h:inputText value="#{subjectsToChoose.uzsienioKalbaIspl}"></h:inputText>
+	Istorija (išpl.) <h:inputText value="#{subjectsToChoose.istorijaIspl}"></h:inputText>
+	Matematika (išpl.) <h:inputText value="#{subjectsToChoose.matematikaIspl}"></h:inputText>
+	Biologija (išpl.) <h:inputText value="#{subjectsToChoose.biologijaIspl}"></h:inputText>
+	Fizika (išpl.) <h:inputText value="#{subjectsToChoose.fizikaIspl}"></h:inputText>
+	Chemija (išpl.) <h:inputText value="#{subjectsToChoose.chemijaIspl}"></h:inputText>
+	</h:panelGrid><br/>
+	
+	Dalykų moduliai:
+	<h:panelGrid columns="2" style="border:1px solid black">
+	Biologijos modulis I <h:inputText value="#{subjectsToChoose.biologijaMod1}"></h:inputText>
+	Chemijos modulis <h:inputText value="#{subjectsToChoose.chemijaMod}"></h:inputText>
+	Biologijos modulis II <h:inputText value="#{subjectsToChoose.biologijaMod2}"></h:inputText>
+	Fizikos modulis I <h:inputText value="#{subjectsToChoose.fizikaMod1}"></h:inputText>
+	Fizikos modulis II <h:inputText value="#{subjectsToChoose.fizikaMod2}"></h:inputText>
+	Fizikos modulis III <h:inputText value="#{subjectsToChoose.fizikaMod3}"></h:inputText>
+	Matematikos modulis I <h:inputText value="#{subjectsToChoose.matematikaMod1}"></h:inputText>
+	Matematikos modulis II <h:inputText value="#{subjectsToChoose.matematikaMod2}"></h:inputText>
+	Matematikos modulis III <h:inputText value="#{subjectsToChoose.matematikaMod3}"></h:inputText>
+	</h:panelGrid><br/>
+	
+	<h:panelGrid columns="2">
+	<h:outputLabel style="color:green">Pasirenkamieji dalykai viso:</h:outputLabel> <h:inputText value="0"></h:inputText>
+	</h:panelGrid>
+	
+	</h:panelGrid>
+	</h:panelGrid>
+	
+	<h:panelGrid columns="2">
+	<h:outputLabel style="color:green; font-size:20px">Iš viso valandų:</h:outputLabel> <h:inputText value="0"></h:inputText>
+	</h:panelGrid>
+	
+	</h:form>
+	</h:body>
+	</html>
