@@ -1,4 +1,4 @@
-package lt.vtvpmc.ems.pw.entities;
+package lt.vtvpmc.ems.pw.data.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
