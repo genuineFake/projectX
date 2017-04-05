@@ -24,6 +24,7 @@
 
         <mapping class="lt.vtvpmc.ems.pw.data.entities.TeachingPlanMandatory"/>
         <mapping class="lt.vtvpmc.ems.pw.data.entities.Student" />
+        <mapping class="lt.vtvpmc.ems.pw.data.entities.ApplicationForm" />
 
 
     </session-factory>

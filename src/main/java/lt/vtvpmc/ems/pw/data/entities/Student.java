@@ -12,9 +12,13 @@ public class Student implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "STUDENT_ID")
     private Long id;
+
+    @OneToOne(mappedBy="student")
+    public ApplicationForm form;
+
     @Column(name = "FIRST_NAME")
     private String firstName;
     @Column(name = "LAST_NAME")
@@ -58,6 +62,14 @@ public class Student implements Serializable {
 
     public static long getSerialVersionUID() {
         return serialVersionUID;
+    }
+
+    public ApplicationForm getForm() {
+        return form;
+    }
+
+    public void setForm(ApplicationForm form) {
+        this.form = form;
     }
 
     public Long getId() {
