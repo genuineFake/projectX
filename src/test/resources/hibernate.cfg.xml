@@ -9,7 +9,7 @@
 
         <!-- Database connection settings -->
         <property name="connection.driver_class">org.h2.Driver</property>
-        <property name="connection.url">jdbc:h2:.//tmp/reg.db</property>
+        <property name="connection.url">jdbc:h2:mem:test;DB_CLOSE_DELAY=-1</property>
         <property name="connection.username">sa</property>
         <property name="connection.password" />
 
@@ -24,8 +24,7 @@
 
         <mapping class="lt.vtvpmc.ems.pw.data.entities.TeachingPlanMandatory"/>
         <mapping class="lt.vtvpmc.ems.pw.data.entities.Student" />
-        <mapping class="lt.vtvpmc.ems.pw.data.entities.ApplicationForm" />
-
+        <mapping class="lt.vtvpmc.ems.pw.data.entities.ApplicationForm"/>
 
     </session-factory>
 
