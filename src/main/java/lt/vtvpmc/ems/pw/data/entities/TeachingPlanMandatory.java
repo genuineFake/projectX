@@ -13,8 +13,8 @@ public class TeachingPlanMandatory {
     @Id
     @GeneratedValue(generator="increment")
     @GenericGenerator(name="increment", strategy = "increment")
-    @Column(name = "STUDENT_ID")
-    private int studentId;
+    @Column(name = "MANDATORY_ID")
+    private int Id;
     @Column(name = "TIKYBA")
     private int tikyba;
     @Column(name = "ETIKA")
@@ -87,12 +87,12 @@ public class TeachingPlanMandatory {
         this.integrGamtosMoksluKursas = integrGamtosMoksluKursas;
     }
 
-    public int getStudentId() {
-        return studentId;
+    public int getId() {
+        return Id;
     }
 
-    public void setStudentId(int studentId) {
-        this.studentId = studentId;
+    public void setId(int studentId) {
+        this.Id = studentId;
     }
 
     public int getTikyba() {

@@ -8,8 +8,8 @@ public class SubjectsToChoose {
 	@Id
 	@SequenceGenerator(name="seq",sequenceName="sequence")        
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="seq") 
-	@Column(name = "STUDENT_ID")
-	private int studentId;
+	@Column(name = "OPTIONAL_ID")
+	private int Id;
 	
 	@Column (name = "RUSU_II")
 	private int rusu2;
@@ -123,12 +123,12 @@ public class SubjectsToChoose {
 		this.matematikaMod3 = matematikaMod3;
 	}
 
-	public int getStudentId() {
-		return studentId;
+	public int getId() {
+		return Id;
 	}
 
-	public void setStudentId(int studentId) {
-		this.studentId = studentId;
+	public void setId(int studentId) {
+		this.Id = studentId;
 	}
 
 	public int getRusu2() {
