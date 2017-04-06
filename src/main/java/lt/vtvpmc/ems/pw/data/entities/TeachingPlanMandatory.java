@@ -57,6 +57,9 @@ public class TeachingPlanMandatory {
     private int chemija;
     @Column(name = "INT_GAMTOS_MOKSLAI")
     private int integrGamtosMoksluKursas;
+    
+    @Column(name="STUDENT_ID")
+    private Student student;
 
     public TeachingPlanMandatory() {
 
@@ -94,8 +97,18 @@ public class TeachingPlanMandatory {
     public void setId(int studentId) {
         this.Id = studentId;
     }
+    
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="STUDENT_ID")
+    public Student getStudent() {
+		return student;
+	}
 
-    public int getTikyba() {
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+
+	public int getTikyba() {
         return tikyba;
     }
 

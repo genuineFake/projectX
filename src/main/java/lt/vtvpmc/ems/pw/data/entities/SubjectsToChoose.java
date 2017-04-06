@@ -86,6 +86,9 @@ public class SubjectsToChoose {
 	@Column (name = "MATEMATIKA_MOD_III")
 	private int matematikaMod3;
 	
+	@Column(name="STUDENT_ID")
+	private Student student;
+	
 	public SubjectsToChoose(){
 	}
 	
@@ -129,6 +132,16 @@ public class SubjectsToChoose {
 
 	public void setId(int studentId) {
 		this.Id = studentId;
+	}
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="STUDENT_ID")
+	public Student getStudent() {
+		return student;
+	}
+
+	public void setStudent(Student student) {
+		this.student = student;
 	}
 
 	public int getRusu2() {
