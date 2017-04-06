@@ -41,6 +41,8 @@ public class Student implements Serializable {
     private int schoolGraduationYear;
     @Column(name = "MARITAL_STATUS")
     private String maritalStatus;
+    @Column(name="GROUP")
+    private String group;
 
 
     public Student() {
@@ -66,9 +68,17 @@ public class Student implements Serializable {
 
     public ApplicationForm getForm() {
         return form;
-    }
+    }  
 
-    public void setForm(ApplicationForm form) {
+    public String getGroup() {
+		return group;
+	}
+
+	public void setGroup(String group) {
+		this.group = group;
+	}
+
+	public void setForm(ApplicationForm form) {
         this.form = form;
     }
 

@@ -14,4 +14,8 @@
     
     <bean id="studentListBean" class="lt.vtvpmc.ems.pw.controllers.StudentListBean" scope="request"/>
     
+    <bean id="allListBean" class="lt.vtvpmc.ems.pw.controllers.AllListBean" scope="request" />
+    
+    <bean id="subjectsPageBean" class="lt.vtvpmc.ems.pw.controllers.SubjectsPageBean" scope="request" />
+    
 </beans>

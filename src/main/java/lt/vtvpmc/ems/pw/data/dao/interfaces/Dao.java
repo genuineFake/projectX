@@ -19,4 +19,10 @@ public interface Dao<T,ID> {
 	public void clear();
 
 	public void setSession(Session session);
+
+	public T findBySurname(String surname);
+
+	int totalHoursMandatoryById(Long id);
+
+	int totalHoursChoosenById(Long id);
 }
