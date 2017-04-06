@@ -74,7 +74,7 @@ public class TeachingPlanMandatoryTest extends TestCase {
         session.beginTransaction();
         List result = session.createQuery( "from TeachingPlanMandatory" ).list();
         for ( TeachingPlanMandatory m : (List<TeachingPlanMandatory>) result ) {
-            System.out.println( "Test (" + m.getStudentId() + ") : " + m.getTikyba() );
+            System.out.println( "Test (" + m.getId() + ") : " + m.getTikyba() );
         }
         session.getTransaction().commit();
         session.close();
