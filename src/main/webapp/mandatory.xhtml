@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html" 
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+    
+	<h:head>
+		<title>Privalomieji dalykai</title>
+	</h:head>
+	
+	<h:body>
+	<h:form>
+
+	<h:panelGrid columns="2" style="border:1px solid black" >
+	<f:facet name="header">
+    <h:outputText value="Privalomieji bendrojo ugdymo branduolio dalykai" />
+  	</f:facet>
+  	
+	<h:panelGrid columns="2" style="border:1px solid black">
+	<f:facet name="header">
+    <h:outputText value="Dorinis ugdymas:" />
+  	</f:facet>
+	Tikyba (1) <h:inputText value="#{teachingPlanData.newTeachingPlan.mandatory.tikyba}"></h:inputText>
+	Etika (1) <h:inputText value="#{teachingPlanData.newTeachingPlan.etika}"></h:inputText>
+	</h:panelGrid>
+	
+	<h:panelGrid columns="2" style="border:1px solid black">
+	<f:facet name="header">
+    <h:outputText value="Kalbos:" />
+  	</f:facet>
+	Lietuvių kalba ir literatūra (4) <h:inputText value="#{teachingPlanData.newTeachingPlan.mandatory.lietuviuIrLiteratura4}"></h:inputText>
+	Lietuvių kalba ir literatūra (6) <h:inputText value="#{teachingPlanData.newTeachingPlan.mandatory.lietuviuIrLiteratura6}"></h:inputText>
+	(Jei gimtoji kalba rusų arba lenkų)
+	Gimtoji rusų: <h:inputText value="#{teachingPlanData.newTeachingPlan.mandatory.gimtRusu}"></h:inputText>
+	Gimtoji lenkų: <h:inputText value="#{teachingPlanData.newTeachingPlan.mandatory.gimtLenku}"></h:inputText>
+	Užsienio kalbos:<br/>
+	Lietuvių gimtoji - 3  Lietuvių valstybinė - 2 <br/>
+	Užsienio kalba (anglų) <h:inputText value="#{teachingPlanData.newTeachingPlan.mandatory.uzsienioAnglu}"></h:inputText>
+	Užsienio kalba (vokiečių) <h:inputText value="#{teachingPlanData.newTeachingPlan.mandatory.uzsienioVokieciu}"></h:inputText>
+	Užsienio kalba (prancūzų) <h:inputText value="#{teachingPlanData.newTeachingPlan.mandatory.uzsienioPrancuzu}"></h:inputText>
+	Užsienio kalba (rusų) <h:inputText value="#{teachingPlanData.newTeachingPlan.mandatory.uzsienioRusu}"></h:inputText>
+	</h:panelGrid>
+	
+	<h:panelGrid columns="2" style="border:1px solid black">
+	<f:facet name="header">
+    <h:outputText value="Gamtamokslinis ugdymas:" />
+  	</f:facet>
+	Biologija (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.mandatory.biologija}"></h:inputText>
+	Fizika (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.mandatory.fizika}"></h:inputText>
+	Chemija (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.mandatory.chemija}"></h:inputText>
+	Integruotas gamtos mokslų kursas (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.mandatory.integrGamtosMoksluKursas}"></h:inputText>
+	</h:panelGrid>
+
+	<h:panelGrid columns="2" style="border:1px solid black">
+	<f:facet name="header">
+    <h:outputText value="Socialinis ugdymas:" />
+  	</f:facet>
+	Istorija (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.mandatory.istorija}"></h:inputText>
+	Geografija (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.mandatory.geografija}"></h:inputText>
+	Integruotas soc. mokslų kursas (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.mandatory.integrSocMokKursas}"></h:inputText>
+	</h:panelGrid>
+	
+	<h:panelGrid columns="2">
+	Matematika (3) <h:inputText value="#{teachingPlanData.newTeachingPlan.mandatory.matematika}"></h:inputText>
+	</h:panelGrid>
+	
+	<h:panelGrid columns="2" style="border:1px solid black">
+	<f:facet name="header">
+    <h:outputText value="Kūno kultūra:" />
+  	</f:facet>
+	Bendroji kūno kultūra (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.mandatory.bendrojiKunoK}"></h:inputText>
+	Futbolas (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.mandatory.futbolas}"></h:inputText>
+	Krepšinis (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.mandatory.krepsinis}"></h:inputText>
+	</h:panelGrid>
+
+  	</h:panelGrid>
+  	</h:form>
+  	</h:body>
+  	</html>

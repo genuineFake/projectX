@@ -7,7 +7,7 @@
     xmlns:ui="http://java.sun.com/jsf/facelets">
     
 	<h:head>
-		<title>Subject To Choose</title>
+		<title>Pasirenkamieji dalykai</title>
 	</h:head>
 	
 	<h:body>
@@ -22,44 +22,45 @@
 	<f:facet name="header">
     <h:outputText value="Pasirenkamieji dalykai:" />
   	</f:facet>
-	Rusų kalba II (2) <h:inputText value="#{subjectsToChoose.rusu2}"></h:inputText>
-	Anglų kalba (2) <h:inputText value="#{subjectsToChoose.anglu2}"></h:inputText>
-	Vokiečių kalba II (2) <h:inputText value="#{subjectsToChoose.vokieciu2}"></h:inputText>
-	Dizainas (2) <h:inputText value="#{subjectsToChoose.dizainas}"></h:inputText>
-	Dailė (2) <h:inputText value="#{subjectsToChoose.daile}"></h:inputText>
-	Teatras (2) <h:inputText value="#{subjectsToChoose.teatras}"></h:inputText>
-	Muzika (2) <h:inputText value="#{subjectsToChoose.muzika}"></h:inputText>
-	Informacinės technologijos (2) <h:inputText value="#{subjectsToChoose.informacinesTechnologijos}"></h:inputText><br/><br/><br/><br/><br/>
+	Rusų kalba II (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.rusu2}"></h:inputText>
+	Anglų kalba (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.anglu2}"></h:inputText>
+	Vokiečių kalba II (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.vokieciu2}"></h:inputText>
+	Dizainas (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.dizainas}"></h:inputText>
+	Dailė (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.daile}"></h:inputText>
+	Teatras (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.teatras}"></h:inputText>
+	Muzika (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.muzika}"></h:inputText>
+	Informacinės technologijos (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.informacinesTechnologijos}"></h:inputText><br/><br/><br/><br/><br/>
 	</h:panelGrid>
 			
 	<h:panelGrid columns="2" style="border:1px solid black">
 	<f:facet name="header">
     <h:outputText value="Išplėstinių dalykų kursas:" />
   	</f:facet>
-	Lietuvių gimtoji kalba (išpl.) (1) <h:inputText value="#{subjectsToChoose.lietuviuGimtojiIspl}"></h:inputText>
-	Lietuvių valstybinė kalba (išpl.) (1) <h:inputText value="#{subjectsToChoose.lietuviuValstybineIspl}"></h:inputText>
-	Užsienio kalba (išpl.) (1 arba 2) <h:inputText value="#{subjectsToChoose.uzsinioKalbaISpl}"></h:inputText>
-	Istorija (išpl.) (1) <h:inputText value="#{subjectsToChoose.istorijaIspl}"></h:inputText>
-	Matematika (išpl.) (1) <h:inputText value="matematikaIspl}"></h:inputText>
-	Biologija (išpl.) (1) <h:inputText value="#{subjectsToChoose.biologijaIspl}"></h:inputText>
-	Fizika (išpl.) (1) <h:inputText value="#{subjectsToChoose.fizikaIspl}"></h:inputText>
-	Chemija (išpl.) (1) <h:inputText value="#{subjectsToChoose.chemijaIspl}"></h:inputText><br/><br/><br/>
+	Lietuvių gimtoji kalba (išpl.) (1) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.lietuviuGimtojiIspl}"></h:inputText>
+	Lietuvių valstybinė kalba (išpl.) (1) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.lietuviuValstybineIspl}"></h:inputText>
+	Užsienio kalba (išpl.) (1 arba 2) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.uzsienioKalbaISpl}"></h:inputText>
+	Istorija (išpl.) (1) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.istorijaIspl}"></h:inputText>
+	Matematika (išpl.) (1) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.matematikaIspl}"></h:inputText>
+	Biologija (išpl.) (1) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.biologijaIspl}"></h:inputText>
+	Fizika (išpl.) (1) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.fizikaIspl}"></h:inputText>
+	Chemija (išpl.) (1) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.chemijaIspl}"></h:inputText><br/><br/><br/>
 	</h:panelGrid>
 	
 	<h:panelGrid columns="2" style="border:1px solid black">
 	<f:facet name="header">
     <h:outputText value="Dalykų moduliai:" />
   	</f:facet>
-	Biologijos modulis I <h:inputText value="#{subjectsToChoose.biologijaMod1}"></h:inputText>
-	Chemijos modulis <h:inputText value="#{subjectsToChoose.chemijaMod}"></h:inputText>
-	Biologijos modulis II <h:inputText value="#{subjectsToChoose.biologijaMod2}"></h:inputText>
-	Fizikos modulis I <h:inputText value="#{subjectsToChoose.fizikaMod1}"></h:inputText>
-	Fizikos modulis II <h:inputText value="#{subjectsToChoose.fizikaMod2}"></h:inputText>
-	Fizikos modulis III <h:inputText value="#{subjectsToChoose.fizikaMod3}"></h:inputText>
-	Matematikos modulis I <h:inputText value="#{subjectsToChoose.matematikaMod1}"></h:inputText>
-	Matematikos modulis II <h:inputText value="#{subjectsToChoose.matematikaMod2}"></h:inputText>
-	Matematikos modulis III <h:inputText value="#{subjectsToChoose.matematikaMod3}"></h:inputText>
+	Biologijos modulis I <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.biologijaMod1}"></h:inputText>
+	Chemijos modulis <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.chemijaMod}"></h:inputText>
+	Biologijos modulis II <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.biologijaMod2}"></h:inputText>
+	Fizikos modulis I <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.fizikaMod1}"></h:inputText>
+	Fizikos modulis II <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.fizikaMod2}"></h:inputText>
+	Fizikos modulis III <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.fizikaMod3}"></h:inputText>
+	Matematikos modulis I <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.matematikaMod1}"></h:inputText>
+	Matematikos modulis II <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.matematikaMod2}"></h:inputText>
+	Matematikos modulis III <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.matematikaMod3}"></h:inputText>
 	</h:panelGrid>
+	
 	</h:panelGrid>	
 	</h:form>
 	</h:body>
