@@ -17,7 +17,7 @@ public class Student implements Serializable {
     private Long id;
 
     @OneToOne(mappedBy="student")
-    public ApplicationForm form;
+    private ApplicationForm applicationForm;
 
     @Column(name = "FIRST_NAME")
     private String firstName;
@@ -62,12 +62,8 @@ public class Student implements Serializable {
         this.maritalStatus = maritalStatus;
     }
 
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
-
-    public ApplicationForm getForm() {
-        return form;
+    public ApplicationForm getApplicationForm() {
+        return applicationForm;
     }  
 
     public String getGroup() {
@@ -78,8 +74,8 @@ public class Student implements Serializable {
 		this.group = group;
 	}
 
-	public void setForm(ApplicationForm form) {
-        this.form = form;
+	public void setForm(ApplicationForm applicationForm) {
+        this.applicationForm = applicationForm;
     }
 
     public Long getId() {
@@ -177,4 +173,8 @@ public class Student implements Serializable {
     public void setMaritalStatus(String maritalStatus) {
         this.maritalStatus = maritalStatus;
     }
+
+	public void setApplicationForm(ApplicationForm applicationForm) {
+		this.applicationForm = applicationForm;
+	}
 }

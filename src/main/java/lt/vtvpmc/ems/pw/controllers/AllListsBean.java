@@ -12,10 +12,15 @@ public class AllListsBean {
 	
 	public AllListsBean(){
 		municipality = new ArrayList<>();
+		fillMunicipality();
 		education = new ArrayList<>();
+		fillEducation();
 		maritalStatus = new ArrayList<>();
+		fillMaritalStatus();
 		institutionType = new ArrayList<>();
+		fillInstitutionType();
 		graduationYear = new ArrayList<>();
+		fillGraduationYear();
 	}
 	
 	

@@ -7,10 +7,15 @@
     xmlns:ui="http://java.sun.com/jsf/facelets">
     
 	<h:head>
-		<title>Privalomieji dalykai</title>
+		<title>Mokymosi plano sudarymas</title>
 	</h:head>
 	
 	<h:body>
+	
+	<h:form>
+	<h:commandButton action="main" value="Pagrindinis puslapis">
+	</h:form>
+	
 	<h:form>
 
 	<h:panelGrid columns="2" style="border:1px solid black" >
@@ -74,8 +79,61 @@
 	Futbolas (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.mandatory.futbolas}"></h:inputText>
 	Krepšinis (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.mandatory.krepsinis}"></h:inputText>
 	</h:panelGrid>
-
   	</h:panelGrid>
+  	
+  	
+  	<h:panelGrid columns="3">
+	<f:facet name="header">
+    <h:outputText value="Pasirenkamieji profesijos arba bendrojo ugdymo dalykai" />
+  	</f:facet>
+	
+	<h:panelGrid columns="2" style="border:1px solid black">
+	<f:facet name="header">
+    <h:outputText value="Pasirenkamieji dalykai:" />
+  	</f:facet>
+	Rusų kalba II (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.rusu2}"></h:inputText>
+	Anglų kalba (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.anglu2}"></h:inputText>
+	Vokiečių kalba II (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.vokieciu2}"></h:inputText>
+	Dizainas (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.dizainas}"></h:inputText>
+	Dailė (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.daile}"></h:inputText>
+	Teatras (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.teatras}"></h:inputText>
+	Muzika (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.muzika}"></h:inputText>
+	Informacinės technologijos (2) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.informacinesTechnologijos}"></h:inputText><br/><br/><br/><br/><br/>
+	</h:panelGrid>
+			
+	<h:panelGrid columns="2" style="border:1px solid black">
+	<f:facet name="header">
+    <h:outputText value="Išplėstinių dalykų kursas:" />
+  	</f:facet>
+	Lietuvių gimtoji kalba (išpl.) (1) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.lietuviuGimtojiIspl}"></h:inputText>
+	Lietuvių valstybinė kalba (išpl.) (1) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.lietuviuValstybineIspl}"></h:inputText>
+	Užsienio kalba (išpl.) (1 arba 2) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.uzsienioKalbaISpl}"></h:inputText>
+	Istorija (išpl.) (1) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.istorijaIspl}"></h:inputText>
+	Matematika (išpl.) (1) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.matematikaIspl}"></h:inputText>
+	Biologija (išpl.) (1) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.biologijaIspl}"></h:inputText>
+	Fizika (išpl.) (1) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.fizikaIspl}"></h:inputText>
+	Chemija (išpl.) (1) <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.chemijaIspl}"></h:inputText><br/><br/><br/>
+	</h:panelGrid>
+	
+	<h:panelGrid columns="2" style="border:1px solid black">
+	<f:facet name="header">
+    <h:outputText value="Dalykų moduliai:" />
+  	</f:facet>
+	Biologijos modulis I <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.biologijaMod1}"></h:inputText>
+	Chemijos modulis <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.chemijaMod}"></h:inputText>
+	Biologijos modulis II <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.biologijaMod2}"></h:inputText>
+	Fizikos modulis I <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.fizikaMod1}"></h:inputText>
+	Fizikos modulis II <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.fizikaMod2}"></h:inputText>
+	Fizikos modulis III <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.fizikaMod3}"></h:inputText>
+	Matematikos modulis I <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.matematikaMod1}"></h:inputText>
+	Matematikos modulis II <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.matematikaMod2}"></h:inputText>
+	Matematikos modulis III <h:inputText value="#{teachingPlanData.newTeachingPlan.optional.matematikaMod3}"></h:inputText>
+	</h:panelGrid>
+	
+	</h:panelGrid>
+	
+	<h:commandButton action="#{subjectsPageBean.addNewPlan()}" value="Išsaugoti" />
+  	
   	</h:form>
   	</h:body>
   	</html>
