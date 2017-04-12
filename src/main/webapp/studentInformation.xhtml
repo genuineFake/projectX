@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html" 
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+    
+	<h:head>
+		<title>Informacija apie mokinį</title>
+	</h:head>
+	
+	<h:body>
+	
+	<h:form>
+	<h:commandButton action="main" value="Pagrindinis puslapis">
+	</h:form>
+	
+	<h:form>
+	
+	<h:panelGrid columns="3" style="border:1px solid black" >
+	
+	<h:panelGrid columns="2" style="border:1px solid black" >
+	<f:facet name="header">
+    <h:outputText value="Informacija apie mokinį" />
+  	</f:facet>
+	
+	Vardas: #{studentData.currentStudent.firstName}<br/>
+	
+	Pavardė: #{studentData.currentStudent.lastName}<br/>
+	
+	Gimimo metai: #{studentData.currentStudent.dateOfBirth}<br/>
+	
+	Adresas: #{studentData.currentStudent.address}<br/>
+	
+	Savivaldybė: #{studentData.currentStudent.municipality}<br/>
+	
+	Telefono numeris: #{studentData.currentStudent.phoneNumber}<br/>
+								   
+	Elektroninis paštas: #{studentData.currentStudent.email}<br/>
+	
+	Išsilavinimas: #{studentData.currentStudent.education}<br/>
+				   
+	Baigtos mokyklos pavadinimas: #{studentData.currentStudent.schoolGraduated}<br/>
+	
+	Mokyklos baigimo metai: #{studentData.currentStudent.schoolGraduationYear}<br/>
+				   			
+	Šeimyninė padėtis: #{studentData.currentStudent.maritalStatus}<br/>
+	</h:panelGrid>
+	
+	<h:panelGrid columns="2" style="border:1px solid black" >
+	<f:facet name="header">
+    <h:outputText value="Jei mokomąsi ne pirmą kartą" />
+  	</f:facet>
+  	
+  	Įgyta specialybė: #{studentData.currentApplicationForm.acquiredSpecialisation}<br/>
+  	
+  	Institucijos pavadinimas: #{studentData.currentApplicationForm.nameOfInstitution}<br/>
+  	
+  	Institucijos tipas: #{studentData.currentApplicationForm.typeOfInstitution}<br/>
+				   		
+	Baigimo metai: #{studentData.currentApplicationForm.tdateOfGraduation}<br/>
+
+  	</h:panelGrid>
+	
+	<h:panelGrid columns="2" style="border:1px solid black" >
+	<f:facet name="header">
+    <h:outputText value="Informacija apie prašymą" />
+  	</f:facet>
+  	
+  	Priėmimo prašymo data: #{studentData.currentApplicationForm.dateOfApplication}<br/>
+  	
+  	Grupė: #{studentData.currentApplicationForm.schoolGroup}<br/>
+  	
+  	Pakopa: #{studentData.currentApplicationForm.schoolLevel}<br/>
+  	</h:panelGrid>
+  	
+  	<h:panelGrid columns="2" style="border:1px solid black" >
+	<f:facet name="header">
+    <h:outputText value="Pridedama prie prašymo" />
+  	</f:facet>
+  	
+  	Išsilavinimo dokumentas: #{studentData.currentApplicationForm.educationDocument}<br/>
+  	
+  	Sveikatos pažymėjimas: #{studentData.currentApplicationForm.medicalCertificate}<br/>
+  	
+  	Nuotraukos: #{studentData.currentApplicationForm.photos}<br/>
+  	
+  	Paso kopija: (tapatybės kortelės kopija) #{studentData.currentApplicationForm.copyOfId}<br/>
+  	
+  	Šauktinio liudijimas: #{studentData.currentApplicationForm.conscriptDocument}<br/>
+  	
+  	Stojamasis mokestis: #{studentData.currentApplicationForm.applicationFee}
+	</h:panelGrid>
+	
+	<h:panelGrid columns="2" style="border:1px solid black" >
+	<f:facet name="header">
+    <h:outputText value="Duomenys apie tėvus/globėjus" />
+  	</f:facet>
+  	
+  	Tėvo vardas: #{studentData.currentApplicationForm.fathersName}<br/>
+  	
+  	Tėvo pavardė: #{studentData.currentApplicationForm.fathersSurname}<br/>
+  	
+  	Tėvo adresas: #{studentData.currentApplicationForm.fathersAddress}<br/>
+  	
+  	Tėvo telefono: numeris #{studentData.currentApplicationForm.fathersPhone}<br/>
+  	
+  	Motinos vardas: #{studentData.currentApplicationForm.mothersName}<br/>
+  	
+  	Motinos pavardė: #{studentData.currentApplicationForm.mothersSurname}<br/>
+  	
+  	Motinos adresas: #{studentData.currentApplicationForm.mothersAddress}<br/>
+  	
+  	Motinos telefono: numeris #{studentData.currentApplicationForm.mothersPhone}<br/>
+  	
+  	Globėjo vardas: #{studentData.currentApplicationForm.guardiansName}<br/>
+  	
+  	Globėjo pavardė: #{studentData.currentApplicationForm.guardiansSurname}<br/>
+  	
+  	Globėjo adresas: #{studentData.currentApplicationForm.guardiansAddress}<br/>
+  	
+  	Globėjo telefono numeris: #{studentData.currentApplicationForm.guardiansPhone}<br/>
+  	</h:panelGrid>
+  	
+  	<h:panelGrid columns="2" style="border:1px solid black" >
+	<f:facet name="header">
+    <h:outputText value="Papildoma informacija" />
+  	</f:facet>
+  	
+  	Bendrabutis: #{studentData.currentApplicationForm.dorm}<br/>
+  	
+  	Iš kur sužinojote apie mūsų įstaigą: #{studentData.currentApplicationForm.gotInfoAboutUs}<br/>
+  					
+  	Mokinys atsiėmė dokumentus: #{studentData.currentApplicationForm.withdrawnApplication}  	
+  	</h:panelGrid>
+  		
+	</h:panelGrid>
+	</h:form>
+	</h:body>
+	</html>
