@@ -1,25 +1,170 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core">
-    <h:head>
-        <title>Add New Student</title>
-    </h:head>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html" 
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
     
-    <h:body>
-        <h:form id="newCustomerForm">
-            <h3>Add New Student</h3>
-            <h:panelGrid columns="3">
-                <h:outputText value="Name:"/>
-                <h:inputText id="clientName" value="#{newStudentBean.studentFirstName}" required="true"/>
-                <h:message for="clientName"/>
-                
-                <h:outputText value="Surname:"/>
-                <h:inputText id="clientSurname" value="#{newStudentBean.studentLastName}" required="true"/>
-                <h:message for="clientSurname"/>
+	<h:head>
+		<title>Pridėti naują mokinį</title>
+	</h:head>
+	
+	<h:body>
+	
+	<h:form>
+	<h:commandButton action="main" value="Pagrindinis puslapis">
+	</h:form>
+	
+	<h:form>
+	<h:panelGrid columns="3" style="border:1px solid black" >
+	
+	<f:facet name="header">
+    <h:outputText value="Mokinio registracija" />
+  	</f:facet>
+	
+	<h:panelGrid columns="2" style="border:1px solid black" >
+	<f:facet name="header">
+    <h:outputText value="Informacija apie mokinį" />
+  	</f:facet>
+	
+	Vardas: <h:inputText value="#{studentData.newStudent.firstName}" /><br/>
+	
+	Pavardė: <h:inputText value="#{studentData.newStudent.lastName}" /><br/>
+	
+	Gimimo metai: <p:calendar value="#{studentData.newStudent.dateOfBirth}" /><br/>
+	
+	Adresas: <h:inputText value="#{studentData.newStudent.address}" /><br/>
+	
+	Savivaldybė: <p:selectOneMenu id="municipality" value="#{studentData.newStudent.municipality}">
+						<f:selectItems value="#{allListsBean.municipality}" />
+				 </p:selectOneMenu><br/>
+	
+	Telefono numeris: <p:inputMask value="#{studentData.newStudent.phoneNumber}" 
+								   mask="+3706 999 9999" /><br/>
+								   
+	Elektroninis paštas: <h:inputText value="#{studentData.newStudent.email}" /><br/>
+	
+	Išsilavinimas: <p:selectOneMenu id="education" value="#{studentData.newStudent.education}">
+						<f:selectItems value="#{allListsBean.education}" /><br/>
+				   </p:selectOneMenu>
+				   
+	Baigtos mokyklos pavadinimas: <h:inputText value="#{studentData.newStudent.schoolGraduated}" /><br/>
+	
+	Mokyklos baigimo metai: <p:selectOneMenu id="graduate" value="#{studentData.newStudent.schoolGraduationYear}">
+								<f:selectItems value="#{allListsBean.graduationYear}" /><br/>
+				   			</p:selectOneMenu>
+				   			
+	Šeimyninė padėtis: <p:selectOneMenu id="marital" value="#{studentData.newStudent.maritalStatus}">
+							<f:selectItems value="#{allListsBean.maritalStatus}" /><br/>
+				   	   </p:selectOneMenu>
+	</h:panelGrid>
+	
+	<h:panelGrid columns="2" style="border:1px solid black" >
+	<f:facet name="header">
+    <h:outputText value="Jei mokomąsi ne pirmą kartą" />
+  	</f:facet>
+  	
+  	Įgyta specialybė: <h:inputText value="#{studentData.newApplicationForm.acquiredSpecialisation}" /><br/>
+  	
+  	Institucijos pavadinimas: <h:inputText value="#{studentData.newApplicationForm.nameOfInstitution}" /><br/>
+  	
+  	Institucijos tipas: <p:selectOneMenu id="type" value="#{studentData.newApplicationForm.typeOfInstitution}">
+							<f:selectItems value="#{allListsBean.institutionType}" />
+				   		</p:selectOneMenu><br/>
+				   		
+	Baigimo metai: <p:selectOneMenu id="type" value="#{studentData.newApplicationForm.tdateOfGraduation}">
+						<f:selectItems value="#{allListsBean.graduationYear}" /><br/>
+				   </p:selectOneMenu><br/>
 
-            </h:panelGrid>
-            <h:commandButton action="#{newStudentBean.save()}" value="Add"/>
-        </h:form>
-    </h:body>
-</html>
+  	</h:panelGrid>
+	
+	<h:panelGrid columns="2" style="border:1px solid black" >
+	<f:facet name="header">
+    <h:outputText value="Informacija apie prašymą" />
+  	</f:facet>
+  	
+  	Priėmimo prašymo data: <p:calendar value="#{studentData.newApplicationForm.dateOfApplication}" /><br/>
+  	
+  	Grupė: <h:inputText value="#{studentData.newApplicationForm.schoolGroup}" /><br/>
+  	
+  	Pakopa: <h:inputText value="#{studentData.newApplicationForm.schoolLevel}" /><br/>
+  	</h:panelGrid>
+  	
+  	<h:panelGrid columns="2" style="border:1px solid black" >
+	<f:facet name="header">
+    <h:outputText value="Pridedama prie prašymo" />
+  	</f:facet>
+  	
+  	Išsilavinimo dokumentas <p:selectBooleanCheckbox value="#{studentData.newApplicationForm.educationDocument}" /><br/>
+  	
+  	Sveikatos pažymėjimas <p:selectBooleanCheckbox value="#{studentData.newApplicationForm.medicalCertificate}" /><br/>
+  	
+  	Nuotraukos <p:selectBooleanCheckbox value="#{studentData.newApplicationForm.photos}" /><br/>
+  	
+  	Paso kopija (tapatybės kortelės kopija) <p:selectBooleanCheckbox value="#{studentData.newApplicationForm.copyOfId}" /><br/>
+  	
+  	Šauktinio liudijimas <p:selectBooleanCheckbox value="#{studentData.newApplicationForm.conscriptDocument}" /><br/>
+  	
+  	Stojamasis mokestis <p:selectBooleanCheckbox value="#{studentData.newApplicationForm.applicationFee}" />
+	</h:panelGrid>
+	
+	<h:panelGrid columns="2" style="border:1px solid black" >
+	<f:facet name="header">
+    <h:outputText value="Duomenys apie tėvus/globėjus" />
+  	</f:facet>
+  	
+  	Tėvo vardas <h:inputText value="#{studentData.newApplicationForm.fathersName}" /><br/>
+  	
+  	Tėvo pavardė <h:inputText value="#{studentData.newApplicationForm.fathersSurname}" /><br/>
+  	
+  	Tėvo adresas <h:inputText value="#{studentData.newApplicationForm.fathersAddress}" /><br/>
+  	
+  	Tėvo telefono numeris <h:inputText value="#{studentData.newApplicationForm.fathersPhone}" /><br/>
+  	
+  	Motinos vardas <h:inputText value="#{studentData.newApplicationForm.mothersName}" /><br/>
+  	
+  	Motinos pavardė <h:inputText value="#{studentData.newApplicationForm.mothersSurname}" /><br/>
+  	
+  	Motinos adresas <h:inputText value="#{studentData.newApplicationForm.mothersAddress}" /><br/>
+  	
+  	Motinos telefono numeris <h:inputText value="#{studentData.newApplicationForm.mothersPhone}" /><br/>
+  	
+  	Globėjo vardas <h:inputText value="#{studentData.newApplicationForm.guardiansName}" /><br/>
+  	
+  	Globėjo pavardė <h:inputText value="#{studentData.newApplicationForm.guardiansSurname}" /><br/>
+  	
+  	Globėjo adresas <h:inputText value="#{studentData.newApplicationForm.guardiansAddress}" /><br/>
+  	
+  	Globėjo telefono numeris <h:inputText value="#{studentData.newApplicationForm.guardiansPhone}" /><br/>
+  	</h:panelGrid>
+  	
+  	<h:panelGrid columns="2" style="border:1px solid black" >
+	<f:facet name="header">
+    <h:outputText value="Papildoma informacija" />
+  	</f:facet>
+  	
+  	Bendrabutis <p:selectBooleanCheckbox value="#{studentData.newApplicationForm.dorm}" /><br/>
+  	
+  	Iš kur sužinojote apie mūsų įstaigą <p:selectOneRadio value="#{studentData.newApplicationForm.gotInfoAboutUs}">
+  					<f:selectItem itemValue="Draugų" itemLabel="Draugų" />
+  					<f:selectItem itemValue="Interneto" itemLabel="Interneto" />
+  					<f:selectItem itemValue="Kur stoti" itemLabel="Leidinio 'Kur Stoti?'" />
+  					<f:selectItem itemValue="Mokykloje" itemLabel="Mokykloje" />
+  					<f:selectItem itemValue="Reklamoje" itemLabel="Reklamoje" />
+  					<f:selectItem itemValue="Proforientacijos" itemLabel="Proforientacijos metu" />
+  					<f:selectItem itemValue="Kita" itemLabel="Kita" />
+  					</p:selectOneRadio><br/>
+  					
+  	Mokinys atsiėmė dokumentus <p:selectOneRadio value="#{studentData.newApplicationForm.withdrawnApplication}">
+  					<f:selectItem itemValue="Taip" itemLabel="Taip" />
+  					<f:selectItem itemValue="Ne" itemLabel="Ne" />
+  					</p:selectOneRadio>  	
+  	</h:panelGrid>
+  		
+	</h:panelGrid>
+	
+	<h:commandButton action="#{studentPageBean.addNewStudent()}" value="Pridėti mokinį" />
+	
+	</h:form>
+	</h:body>
+	</html>

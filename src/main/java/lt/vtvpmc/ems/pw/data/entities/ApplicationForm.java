@@ -43,25 +43,31 @@ public class ApplicationForm implements Serializable {
     @Column(name = "PHOTOS")
     private Boolean photos;
     @Column(name = "COPY_OF_ID")
-    private Boolean CopyOfId;
+    private Boolean copyOfId;
     @Column(name = "CONSCRIPT_DOCUMENT")
     private Boolean conscriptDocument;
     @Column(name = "APPLICATION_FEE")
-    private Boolean ApplicationFee;
-    @Column(name = "FATHER")
-    private String father;
+    private Boolean applicationFee;
+    @Column(name = "FATHER_NAME")
+    private String fathersName;
+    @Column(name = "FATHER_SURNAME")
+    private String fathersSurname;
     @Column(name = "FATHERS_ADDRESS")
     private String fathersAddress;
     @Column(name = "FATHERS_PHONE")
     private String fathersPhone;
-    @Column(name = "MOTHER")
-    private String mother;
+    @Column(name = "MOTHER_NAME")
+    private String mothersName;
+    @Column(name = "MOTHER_SURNAME")
+    private String mothersSurname;
     @Column(name = "MOTHERS_ADDRESS")
     private String mothersAddress;
     @Column(name = "MOTHERS_PHONE")
     private String mothersPhone;
-    @Column(name = "GUARDIAN")
-    private String guardian;
+    @Column(name = "GUARDIANS_NAME")
+    private String guardiansName;
+    @Column(name = "GUARDIANS_SURNAME")
+    private String guardiansSurname;
     @Column(name = "GUARDIANS_ADDRESS")
     private String guardiansAddress;
     @Column(name = "GUARDIANS_PHONE")
@@ -73,7 +79,7 @@ public class ApplicationForm implements Serializable {
     @Column(name = "APPLICATION_WITHDRAWN")
     private Boolean withdrawnApplication;
 
-    public ApplicationForm(Student student, String acquiredSpecialisation, String nameOfInstitution, String typeOfInstitution, String dateOfGraduation, String dateOfApplication, String schoolGroup, String schoolLevel, Boolean educationDocument, Boolean medicalCertificate, Boolean photos, Boolean copyOfId, Boolean conscriptDocument, Boolean applicationFee, String father, String fathersAddress, String fathersPhone, String mother, String mothersAddress, String mothersPhone, String guardian, String guardiansAddress, String guardiansPhone, String dorm, String gotInfoAboutUs, Boolean withdrawnApplication) {
+    public ApplicationForm(Student student, String acquiredSpecialisation, String nameOfInstitution, String typeOfInstitution, String dateOfGraduation, String dateOfApplication, String schoolGroup, String schoolLevel, Boolean educationDocument, Boolean medicalCertificate, Boolean photos, Boolean copyOfId, Boolean conscriptDocument, Boolean applicationFee, String fathersName, String fathersSurname, String fathersAddress, String fathersPhone, String mothersName, String mothersSurname, String mothersAddress, String mothersPhone, String guardiansName, String guardiansSurname, String guardiansAddress, String guardiansPhone, String dorm, String gotInfoAboutUs, Boolean withdrawnApplication) {
         this.student = student;
         this.acquiredSpecialisation = acquiredSpecialisation;
         this.nameOfInstitution = nameOfInstitution;
@@ -85,16 +91,19 @@ public class ApplicationForm implements Serializable {
         this.educationDocument = educationDocument;
         this.medicalCertificate = medicalCertificate;
         this.photos = photos;
-        CopyOfId = copyOfId;
+        this.copyOfId = copyOfId;
         this.conscriptDocument = conscriptDocument;
-        ApplicationFee = applicationFee;
-        this.father = father;
+        this.applicationFee = applicationFee;
+        this.fathersName = fathersName;
+        this.fathersSurname = fathersSurname;
         this.fathersAddress = fathersAddress;
         this.fathersPhone = fathersPhone;
-        this.mother = mother;
+        this.mothersName = mothersName;
+        this.mothersSurname = mothersSurname;
         this.mothersAddress = mothersAddress;
         this.mothersPhone = mothersPhone;
-        this.guardian = guardian;
+        this.guardiansName = guardiansName;
+        this.guardiansSurname = guardiansSurname;
         this.guardiansAddress = guardiansAddress;
         this.guardiansPhone = guardiansPhone;
         this.dorm = dorm;
@@ -202,11 +211,11 @@ public class ApplicationForm implements Serializable {
     }
 
     public Boolean getCopyOfId() {
-        return CopyOfId;
+        return copyOfId;
     }
 
     public void setCopyOfId(Boolean copyOfId) {
-        CopyOfId = copyOfId;
+        this.copyOfId = copyOfId;
     }
 
     public Boolean getConscriptDocument() {
@@ -218,86 +227,110 @@ public class ApplicationForm implements Serializable {
     }
 
     public Boolean getApplicationFee() {
-        return ApplicationFee;
+        return applicationFee;
     }
 
     public void setApplicationFee(Boolean applicationFee) {
-        ApplicationFee = applicationFee;
+        this.applicationFee = applicationFee;
     }
 
-    public String getFather() {
-        return father;
-    }
+    public String getFathersName() {
+		return fathersName;
+	}
 
-    public void setFather(String father) {
-        this.father = father;
-    }
+	public void setFathersName(String fathersName) {
+		this.fathersName = fathersName;
+	}
 
-    public String getFathersAddress() {
-        return fathersAddress;
-    }
+	public String getFathersSurname() {
+		return fathersSurname;
+	}
 
-    public void setFathersAddress(String fathersAddress) {
-        this.fathersAddress = fathersAddress;
-    }
+	public void setFathersSurname(String fathersSurname) {
+		this.fathersSurname = fathersSurname;
+	}
 
-    public String getFathersPhone() {
-        return fathersPhone;
-    }
+	public String getFathersAddress() {
+		return fathersAddress;
+	}
 
-    public void setFathersPhone(String fathersPhone) {
-        this.fathersPhone = fathersPhone;
-    }
+	public void setFathersAddress(String fathersAddress) {
+		this.fathersAddress = fathersAddress;
+	}
 
-    public String getMother() {
-        return mother;
-    }
+	public String getFathersPhone() {
+		return fathersPhone;
+	}
 
-    public void setMother(String mother) {
-        this.mother = mother;
-    }
+	public void setFathersPhone(String fathersPhone) {
+		this.fathersPhone = fathersPhone;
+	}
 
-    public String getMothersAddress() {
-        return mothersAddress;
-    }
+	public String getMothersName() {
+		return mothersName;
+	}
 
-    public void setMothersAddress(String mothersAddress) {
-        this.mothersAddress = mothersAddress;
-    }
+	public void setMothersName(String mothersName) {
+		this.mothersName = mothersName;
+	}
 
-    public String getMothersPhone() {
-        return mothersPhone;
-    }
+	public String getMothersSurname() {
+		return mothersSurname;
+	}
 
-    public void setMothersPhone(String mothersPhone) {
-        this.mothersPhone = mothersPhone;
-    }
+	public void setMothersSurname(String mothersSurname) {
+		this.mothersSurname = mothersSurname;
+	}
 
-    public String getGuardian() {
-        return guardian;
-    }
+	public String getMothersAddress() {
+		return mothersAddress;
+	}
 
-    public void setGuardian(String guardian) {
-        this.guardian = guardian;
-    }
+	public void setMothersAddress(String mothersAddress) {
+		this.mothersAddress = mothersAddress;
+	}
 
-    public String getGuardiansAddress() {
-        return guardiansAddress;
-    }
+	public String getMothersPhone() {
+		return mothersPhone;
+	}
 
-    public void setGuardiansAddress(String guardiansAddress) {
-        this.guardiansAddress = guardiansAddress;
-    }
+	public void setMothersPhone(String mothersPhone) {
+		this.mothersPhone = mothersPhone;
+	}
 
-    public String getGuardiansPhone() {
-        return guardiansPhone;
-    }
+	public String getGuardiansName() {
+		return guardiansName;
+	}
 
-    public void setGuardiansPhone(String guardiansPhone) {
-        this.guardiansPhone = guardiansPhone;
-    }
+	public void setGuardiansName(String guardiansName) {
+		this.guardiansName = guardiansName;
+	}
 
-    public String getDorm() {
+	public String getGuardiansSurname() {
+		return guardiansSurname;
+	}
+
+	public void setGuardiansSurname(String guardiansSurname) {
+		this.guardiansSurname = guardiansSurname;
+	}
+
+	public String getGuardiansAddress() {
+		return guardiansAddress;
+	}
+
+	public void setGuardiansAddress(String guardiansAddress) {
+		this.guardiansAddress = guardiansAddress;
+	}
+
+	public String getGuardiansPhone() {
+		return guardiansPhone;
+	}
+
+	public void setGuardiansPhone(String guardiansPhone) {
+		this.guardiansPhone = guardiansPhone;
+	}
+
+	public String getDorm() {
         return dorm;
     }
 
