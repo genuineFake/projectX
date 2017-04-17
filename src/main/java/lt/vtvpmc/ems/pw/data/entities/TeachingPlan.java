@@ -10,11 +10,11 @@ import javax.persistence.*;
 public class TeachingPlan {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "MANDATORY_ID")
-    public TeachingPlanMandatory mandatory;
+    private TeachingPlanMandatory mandatory;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "OPTIONAL_ID")
-    public SubjectsToChoose optional;
+    private SubjectsToChoose optional;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "TEACHING_PLAN_ID")

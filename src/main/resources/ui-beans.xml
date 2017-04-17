@@ -10,12 +10,26 @@
                            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
 	
 
-    <bean id="newStudentBean" class="lt.vtvpmc.ems.pw.controllers.NewStudentBean" scope="request"/>
-    
     <bean id="studentListBean" class="lt.vtvpmc.ems.pw.controllers.StudentListBean" scope="request"/>
     
-    <bean id="allListBean" class="lt.vtvpmc.ems.pw.controllers.AllListBean" scope="request" />
+    <bean id="allListBean" class="lt.vtvpmc.ems.pw.controllers.AllListsBean" scope="request" />
     
-    <bean id="subjectsPageBean" class="lt.vtvpmc.ems.pw.controllers.SubjectsPageBean" scope="request" />
+    <bean id="subjectsPageBean" class="lt.vtvpmc.ems.pw.controllers.SubjectsPageBean" scope="request" >
+    	<property name="data" ref="teachingPlanData"></property>
+    	<property name="dao" ref="abstractDao"></property>
+    </bean>
+    
+    <bean id="studentPageBean" class="lt.vtvpmc.ems.pw.controllers.StudentPageBean" scope="request">
+    	<property name="data" ref="studentData"></property>
+    	<property name="dao" ref="abstractDao"></property>
+    </bean>
+    
+    <bean id="studentData" class="lt.vtvpmc.ems.pw.controllers.StudentPageBean.StudentData" scope="session" init-method="init"></bean>
+    
+    <bean id="teachingPlanData" class="lt.vtvpmc.ems.pw.controllers.SubjectsPageBean.TeachingPlanData" scope="session" init-method="init"></bean>
+    
+    <!-- <bean id="abstractDao" class="lt.vtvpmc.ems.pw.data.dao.AbstractDao" scope="singleton">
+    	<property name="entityManagerFactory" ref="entityManagerFactory"></property>
+    </bean>-->
     
 </beans>

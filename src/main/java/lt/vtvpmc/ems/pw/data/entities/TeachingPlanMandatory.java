@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Table (name = "TEACHING_PLAN_MANDATORY")
 public class TeachingPlanMandatory {
     @Id
-    @GeneratedValue(generator="increment")
+    @GeneratedValue
     @GenericGenerator(name="increment", strategy = "increment")
     @Column(name = "MANDATORY_ID")
     private int Id;

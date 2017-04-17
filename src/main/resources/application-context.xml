@@ -25,14 +25,12 @@
         <property name="username" value="sa"/>
         <property name="password" value=""/>
     </bean>
+    
+    <bean id="anoproc" class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
 
     <bean id="entityManagerFactory"
           class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-        <property name="persistenceXmlLocation" value="classpath:persistence.xml" />
-        <property name="persistenceUnitName" value="persistence-unit" />
-        <property name="dataSource" ref="dataSource" />
-        <property name="jpaVendorAdapter" ref="jpaVendorAdapter" />
-        <property name="jpaDialect" ref="jpaDialect" />
+        <property name="persistenceUnitName" value="studentsDB" />
     </bean>
 
     <bean id="jpaVendorAdapter"
